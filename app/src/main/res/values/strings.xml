@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">testingmyapp</string>
+    <string name="hello_this_is_splash_screen">Hello This is splash screen</string>
+    <string name="this_is_login_screen">This is login screen</string>
+    <string name="login">login</string>
+    <string name="chat">chat</string>
+    <string name="profile">profile</string>
+    <string name="explore">explore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_their_welcome_back">Hello their Welcome back</string>
+    <string name="signin_to_continue">SignIn to Continue</string>
+    <string name="username">Username</string>
+    <string name="login_to_contine">Login to contine</string>
+    <string name="new_user_sign_up">New User? SIGN UP</string>
+    <string name="password">password</string>
+    <string name="todo">todo</string>
+    <string name="name_or_user_id">Name or User ID</string>
+    <string name="Username">Username</string>
+    <string name="sign_in_to_start_the_journey">Sign in to start the journey</string>
+    <string name="already_have_an_account_log_in">Already have an account? Log In</string>
+    <string name="sign_in">Sign In</string>
+    <string name="passwordd">Password</string>
+    <string name="phone_no">Phone No</string>
+    <string name="welcome">Welcome</string>
+    <string name="forget_password">forget password</string>
+    <string name="med_setup">Med Setup</string>
+    <string name="webcam_setup">WebCam setup</string>
+    <string name="home">Home</string>
+    <string name="medicinesetup_fragment">Medicinesetup fragment</string>
+    <string name="camera_fargment">camera fargment</string>
+    <string name="this_is_camera_fragment">this is camera fragment</string>
+    <string name="myaccountfrag">myaccountfrag</string>
+    <string name="my_account">My account</string>
+    <string name="hello_welcome_back">Hello Welcome back</string>
+    <string name="camera_b">Camera B</string>
+    <string name="your_daily_dose_of_medicine">Your daily dose of medicine</string>
+
+    <string name="time_slot">Time Slot</string>
+    <string name="when">When</string>
+
+
+    <string name="_08_00_am">08:00 AM</string>
+
+
+    <string name="recent_notifications">Recent Notifications</string>
+    <string name="don_t_forget_to_take_medicine_1_at_08_00_am">Don\'t forget to take Medicine 1 at 08:00 AM</string>
+    <string name="medicine_2_refill_reminder">Medicine 2 refill reminder</string>
+    <string name="medicare">Medicare</string>
+    <string name="camera_a">Camera A</string>
+    <string name="medicine_name">Medicine Name</string>
+    <string name="time">Time Slot</string>
+    <string name="duration">Duration</string>
+    <string name="quantity">Quantity</string>
+    <string name="medicine_name_1">Medicine Name 1</string>
+    <string name="_08_05_am">08:05 AM</string>
+    <string name="before_meal">Before Meal</string>
+    <string name="_2_tabs">2 tabs</string>
+    <string name="setup_your_medicine">Setup your medicine</string>
+    <string name="medicine_setup">medicine setup</string>
+    <string name="enter_the_medicine_name">enter the medicine name</string>
+    <string name="dosage">Dosage</string>
+    <string name="enter_dosage">enter dosage</string>
+    <string name="sun">sun</string>
+    <string name="mon">mon</string>
+    <string name="tue">tue</string>
+    <string name="wed">wed</string>
+    <string name="thurs">thurs</string>
+    <string name="fri">fri</string>
+    <string name="sat">sat</string>
+    <string name="select_time">Select time</string>
+    <string name="add_schedule">Add Schedule</string>
+    <string name="schedule_date">Schedule date</string>
+    <string name="save_and_continue">Save and Continue</string>
+    <string name="passs">****</string>
+    <string name="passworddd">Password</string>
+    <string name="xyz_gmail_com">xyz@gmail.com</string>
+    <string name="email">Email</string>
+    <string name="xyz">xyz</string>
+    <string name="user_id">User Id</string>
+    <string name="name">Name</string>
+    <string name="full_name">Full Name</string>
+    <string name="my_accounts">My Accounts</string>
+    <string name="select_Time">select time</string>
+    <string name="schedule_time">Schedule TIme</string>
+
+</resources>

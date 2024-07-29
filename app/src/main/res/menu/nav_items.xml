@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/nav_home"
+    android:title="@string/home"
+    android:icon="@drawable/baseline_home_24"/>
+
+
+    <item android:id="@+id/nav_chat"
+        android:title="@string/med_setup"
+        android:icon="@drawable/baseline_medical_services_24"/>
+
+    <item android:id="@+id/nav_explore"
+        android:title="@string/webcam_setup"
+        android:icon="@drawable/baseline_photo_camera_24"/>
+
+    <item android:id="@+id/nav_profile"
+        android:title="@string/my_account"
+        android:icon="@drawable/baseline_account_circle_24"/>
+
+</menu>
