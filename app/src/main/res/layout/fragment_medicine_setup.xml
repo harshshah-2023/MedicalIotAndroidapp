@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MedicineSetupFragment">
+    tools:context=".MedicineSetupFragment"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:orientation="vertical"
-        android:layout_marginBottom="5dp">
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/top_background">
 
         <TextView
             android:layout_width="wrap_content"
@@ -20,6 +22,7 @@
             android:text="@string/setup_your_medicine"
             android:textSize="25sp"
             android:textStyle="bold"
+
             android:layout_marginBottom="15dp"
             android:textColor="@color/black"/>
 
@@ -29,15 +32,17 @@
             android:text="@string/medicine_setup"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:fontFamily="@font/droid_serif"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/medsnamesetup"
+            android:textColorHint="@color/black"
             android:hint="@string/enter_the_medicine_name"
             android:layout_marginBottom="2dp"
-            app:boxStrokeColor="#000000"
+            app:boxStrokeColor="@color/black"
             app:hintTextColor="#474747"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -46,7 +51,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:background="@color/white"
+
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -56,7 +64,8 @@
             android:text="@string/dosage"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"
+            android:fontFamily="@font/droid_serif"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -65,7 +74,9 @@
             android:hint="@string/enter_dosage"
             android:layout_marginBottom="2dp"
             app:boxStrokeColor="@color/black"
+            android:textColorHint="@color/black"
             app:hintTextColor="#474747"
+
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -73,7 +84,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:background="@color/white"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -84,7 +97,8 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginBottom="5dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"
+            android:fontFamily="@font/droid_serif"/>
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/timeselectlay"
@@ -112,6 +126,31 @@
                     android:gravity="center"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp">
+
+            <RadioButton
+                android:id="@+id/radio_before_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Before Meal"
+                android:textSize="18sp"
+                android:fontFamily="@font/droid_serif"
+                android:textColor="@color/black"/>
+
+            <RadioButton
+                android:id="@+id/radio_after_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="After Meal"
+                android:textSize="18sp"
+                android:fontFamily="@font/droid_serif"
+                android:textColor="@color/black"
+                android:layout_marginStart="38dp"/>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/scheduletext"
@@ -121,7 +160,7 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginTop="5dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipgroup"
@@ -185,13 +224,23 @@
                 app:chipBackgroundColor="#D3D3D3"/>
         </com.google.android.material.chip.ChipGroup>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/addscheduletext"
             android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/add_schedule"
-            android:layout_gravity="center"/>
+            android:layout_width="200dp"
+            android:layout_height="51dp"
+            android:text="Add Schedule"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            style="@style/Widget.MyLightButton"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/medicine_schedule_recyclerview"
@@ -200,5 +249,6 @@
             android:layout_marginTop="10dp"
             android:dividerHeight="1dp"
             android:textColor="@color/black"/>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+
+</LinearLayout>

@@ -3,6 +3,50 @@
     <style name="Base.Theme.Testingmyapp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    </style>
+
+    <style name="CustomTextStyle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/droid_serif</item>
+
+
+    </style>
+
+
+
+    <style name="Widget.MyButton" parent="Widget.Material3.Button">
+        <!-- Set light blue background color -->
+        <item name="backgroundTint">@color/light_blue</item>
+        <!-- Remove corner radius -->
+
+    </style>
+
+
+    <style name="Widget.MyLightButton" parent="Widget.Material3.Button">
+        <!-- Set light blue background color -->
+
+    </style>
+
+
+
+
+    <!-- ShapeAppearance for a button with no rounded corners -->
+
+
+
+    <style name="Widget.MyLightButtonNr" parent="Widget.Material3.Button">
+        <!-- Set light blue background color -->
+        <item name="backgroundTint">@color/white</item>
+        <!-- Remove corner radius -->
+
+    </style>
+
+    <style name="Widget.MyCustomButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/take_button</item>
     </style>
 
     <style name="Theme.Testingmyapp" parent="Base.Theme.Testingmyapp" />

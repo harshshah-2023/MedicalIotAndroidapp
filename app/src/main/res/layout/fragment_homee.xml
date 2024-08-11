@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,16 +8,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#BBFAF0"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="14dp"
-            android:background="@android:color/white">
+          >
 
-            <!-- Toolbar with menu icon -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -29,14 +30,23 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:textSize="30sp"
-                    android:fontFamily="sans-serif-black"
+                    android:fontFamily="@font/droid_serif"
                     android:layout_weight="1"
                     android:gravity="start"
+                    android:textStyle="bold"
                     android:text="@string/medicare"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="20dp"/>
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/baseline_notifications_active_24"
+                    android:layout_marginRight="10dp"/>
             </LinearLayout>
 
-            <!-- Video player section -->
+
+
             <FrameLayout
                 android:id="@+id/video_player_container"
                 android:layout_width="match_parent"
@@ -49,201 +59,313 @@
                 <VideoView
                     android:id="@+id/video_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <Button
-                    android:id="@+id/button"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"/>
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#99808080"
-                    android:text="@string/camera_a"
-                    android:layout_gravity="center" />
+                    android:text=" Go Live"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="#800000"/>
+
+
 
             </FrameLayout>
 
-            <!-- Text view with "Your daily dose of medicine" text -->
+
+
             <TextView
                 android:id="@+id/daily_dose_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:text="@string/your_daily_dose_of_medicine"
                 android:gravity="start"
-                android:paddingLeft="5dp"/>
+                android:fontFamily="@font/droid_serif"
+                android:paddingLeft="5dp"
+                android:layout_marginHorizontal="10dp"/>
 
-            <!-- Medicine scheduler section -->
-            <LinearLayout
-                android:id="@+id/medicine_scheduler"
+
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="vertical"
-                android:elevation="2dp"
-                android:padding="16dp">
+                android:layout_height="130dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/card_middle_box">
 
-                <!-- Header -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp">
 
                     <TextView
-                        android:id="@+id/header_medicine_name"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:textSize="18sp"
+                        android:text="Evion 400mg"
+                        android:textSize="22sp"
                         android:textStyle="bold"
-                        android:text="@string/medicine_name"
-                        android:gravity="center"
+                        android:fontFamily="@font/droid_serif"
                         android:textColor="@color/black"/>
 
-                    <TextView
-                        android:id="@+id/header_time_slot"
-                        android:layout_width="0dp"
+                    <TextClock
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:text="@string/time"
-                        android:gravity="center"
+                        android:textSize="20sp"
+
+                        android:fontFamily="@font/droid_serif"
                         android:textColor="@color/black"/>
 
-                    <TextView
-                        android:id="@+id/header_when"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:text="@string/duration"
-                        android:gravity="center"
-                        android:textColor="@color/black"/>
-
-                    <TextView
-                        android:id="@+id/header_quantity"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:text="@string/quantity"
-                        android:gravity="center"
-                        android:textColor="@color/black"/>
                 </LinearLayout>
 
-                <!-- Medicine 1 -->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="1 tab"
+                        android:textColor="@color/black"
+
+
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="Before meal"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/medicine_name_1"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="18sp"
-                        android:text="@string/medicine_name_1"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/medicine_time_1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="18sp"
-                        android:text="@string/_08_05_am"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/medicine_meal_1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="18sp"
-                        android:text="@string/before_meal"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/medicine_quantity_1_tab1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="18sp"
-                        android:text="@string/_2_tabs"
-                        android:gravity="center" />
+                        android:layout_gravity="center"
+                        android:text="Take"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
                 </LinearLayout>
 
-                <!-- Medicine 2 -->
-                <!-- Add more medicine entries here as needed -->
 
-            </LinearLayout>
+            </FrameLayout>
 
-            <!-- Notification section -->
-            <LinearLayout
-                android:id="@+id/notification_container"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                android:gravity="center_vertical"
-                android:background="@android:color/white"
-                android:elevation="2dp">
+                android:layout_height="130dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/card_middle_box">
 
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/baseline_notifications_active_24" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="@string/recent_notifications"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/notification_container2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:gravity="center_vertical"
-                android:background="@android:color/white"
-                android:elevation="2dp">
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:text="@string/don_t_forget_to_take_medicine_1_at_08_00_am"
-                    android:textColor="@color/black"/>
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp">
 
-                <TextView
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Evion 400mg"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/droid_serif"
+                        android:textColor="@color/black"/>
+
+                    <TextClock
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+
+                        android:fontFamily="@font/droid_serif"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:text="@string/medicine_2_refill_reminder"
-                    android:textColor="@color/black"/>
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="1 tab"
+                        android:textColor="@color/black"
+
+
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="Before meal"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Take"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/card_middle_box">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Evion 400mg"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/droid_serif"
+                        android:textColor="@color/black"/>
+
+                    <TextClock
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+
+                        android:fontFamily="@font/droid_serif"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="1 tab"
+                        android:textColor="@color/black"
+
+
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="Before meal"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Take"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+           =
+
             </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
 
         </LinearLayout>
 
     </LinearLayout>
 
-</FrameLayout>
+</LinearLayout>
