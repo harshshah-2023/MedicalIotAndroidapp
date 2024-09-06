@@ -1,59 +1,78 @@
 package com.example.testingmyapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [MyaccountFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MyaccountFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_myaccount, container, false)
+        (activity as AppCompatActivity).supportActionBar?.hide()
+        val view = inflater.inflate(R.layout.fragment_myaccount, container, false)
+
+        val forgotPasswordTextView = view.findViewById<TextView>(R.id.forgot_password_textview)
+        forgotPasswordTextView.setOnClickListener {
+            val intent = Intent(activity, ForegtpasswordActivity::class.java)
+            startActivity(intent)
+        }
+
+        val emailTextView = view.findViewById<TextView>(R.id.emailTextView)
+        val usernameTextView = view.findViewById<TextView>(R.id.usernameTextView)
+        val codeTextView = view.findViewById<TextView>(R.id.CodeCargiver)
+        val user = FirebaseAuth.getInstance().currentUser
+
+        user?.let {
+            val email = it.email
+            emailTextView.text = email
+
+            // Retrieve user details from Firestore
+            val uid = it.uid
+            val db = FirebaseFirestore.getInstance()
+            db.collection("users").document(uid)
+                .get()
+                .addOnSuccessListener { document ->
+                    if (document != null && document.exists()) {
+                        val username = document.getString("name")
+                        val userType = document.getString("userType")
+                        val code = document.getString("caregiverCode")
+
+                        usernameTextView.text = username
+
+                        // Show code only if the user is elderly
+                        if (userType == "Elderly") {
+                            codeTextView.text = code
+                            codeTextView.visibility = View.VISIBLE
+                        } else {
+                            codeTextView.visibility = View.GONE
+                        }
+                    } else {
+                        usernameTextView.text = "No username found"
+                    }
+                }
+                .addOnFailureListener { e ->
+                    usernameTextView.text = "Error retrieving user details"
+                }
+        }
+
+        return view
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MyaccountFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance() =
             MyaccountFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+                // You can pass other arguments if needed
+                arguments = Bundle()
             }
     }
 }

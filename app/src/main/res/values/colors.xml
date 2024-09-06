@@ -7,6 +7,7 @@
     <color name="darker_blue">#1E4A72</color>
     <color name="light_blue">#162676</color>
     <color name="lit_blue">#00A7DB</color>
-
+    <color name="skyyblueDarker">#1c92d2</color>
+    <color name="lavender">#8692f7</color>
 
 </resources>

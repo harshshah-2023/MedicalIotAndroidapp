@@ -83,5 +83,42 @@
     <string name="my_accounts">My Accounts</string>
     <string name="select_Time">select time</string>
     <string name="schedule_time">Schedule TIme</string>
+    <string name="registation_login">Sign Up</string>
+    <string name="registation_username">User Name</string>
+    <string name="registaion_email">Email</string>
+    <string name="regsitation_pass">Password</string>
+    <string name="registation_connecteduser">Connected User</string>
+    <string name="registation_Signupbtn">Sign Up</string>
+    <string name="registation_login_connectfrag">Already have an account? Login</string>
+    <string name="login_loginheader">Login</string>
+    <string name="login_loginUsername">User Name</string>
+    <string name="login_loginpass">Password</string>
+    <string name="login_login_email">Email</string>
+    <string name="login_login_conectSignin">New here, Sign In</string>
+    <string name="camsetup_header">Setup Your device</string>
+    <string name="camsetup_midheader">Connect to Continue</string>
+    <string name="camsetup_subheader">Configure Camera: Connect via Bluetooth Settings</string>
+    <string name="camsetup_connbtn">Home cam</string>
+    <string name="camsetup_help">help</string>'
+    <string name="medicine_radio_beforeMeal">Before Meal</string>
+    <string name="medicine_radio_afterMeal">After Meal</string>
+    <string name="myaccount_username">User Name</string>
+    <string name="myaccount_hintname">User Name</string>
+    <string name="myaccount_password">Password</string>
+    <string name="myaccount_hintpass">password</string>
+    <string name="myaccount_connecteduser">Connected User</string>
+    <string name="myaccount_saveandcontinuebtn">Save and Continue</string>
+
+    <string name="myaccount_frgbtn">Forgotten your password?</string>
+    <string-array name="user_array">
+        <item>Elderly person</item>
+        <item>Care giver</item>
+    </string-array>
+
+
+
+
+
+
 
 </resources>

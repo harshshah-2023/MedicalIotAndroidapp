@@ -14,7 +14,7 @@
         android:padding="16dp"
         android:orientation="vertical"
         android:layout_marginBottom="5dp"
-        android:background="@drawable/top_background">
+        android:background="@drawable/largbg2">
 
         <TextView
             android:layout_width="wrap_content"
@@ -53,6 +53,7 @@
                 android:layout_marginBottom="5dp"
                 android:textColor="@color/black"
                 android:background="@color/white"
+                android:elevation="10dp"
 
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -64,7 +65,7 @@
             android:text="@string/dosage"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="@font/droid_serif"/>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -97,7 +98,7 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginBottom="5dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="@font/droid_serif"/>
 
         <com.google.android.material.card.MaterialCardView
@@ -127,6 +128,7 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
         <RadioGroup
+            android:id="@+id/radio_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -136,7 +138,7 @@
                 android:id="@+id/radio_before_meal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Before Meal"
+                android:text="@string/medicine_radio_beforeMeal"
                 android:textSize="18sp"
                 android:fontFamily="@font/droid_serif"
                 android:textColor="@color/black"/>
@@ -145,7 +147,7 @@
                 android:id="@+id/radio_after_meal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="After Meal"
+                android:text="@string/medicine_radio_afterMeal"
                 android:textSize="18sp"
                 android:fontFamily="@font/droid_serif"
                 android:textColor="@color/black"
@@ -160,7 +162,8 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginTop="5dp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"
+            app:singleSelection="true"/>
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipgroup"
@@ -173,39 +176,50 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/sun"
                 android:textColor="@color/black"
-                app:chipBackgroundColor="#D3D3D3"/>
+                app:chipBackgroundColor="#D3D3D3"
+                app:checkedIconVisible="false"
+                />
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                app:checkedIconVisible="false"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/mon"
                 app:chipBackgroundColor="#D3D3D3"
+
                 android:textColor="@color/black"/>
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                app:checkedIconVisible="false"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/tue"
                 android:textColor="@color/black"
-                app:chipBackgroundColor="#D3D3D3"/>
+                app:chipBackgroundColor="#D3D3D3"
+               />
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip4"
                 android:layout_width="wrap_content"
+
                 android:layout_height="match_parent"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/wed"
                 android:textColor="@color/black"
-                app:chipBackgroundColor="#D3D3D3"/>
+
+                app:chipBackgroundColor="#D3D3D3"
+               />
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip5"
                 android:layout_width="wrap_content"
+                app:checkedIconVisible="false"
                 android:layout_height="match_parent"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/thurs"
                 android:textColor="@color/black"
-                app:chipBackgroundColor="#D3D3D3"/>
+                app:chipBackgroundColor="#D3D3D3"
+               />
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip6"
                 android:layout_width="wrap_content"
@@ -213,7 +227,8 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/fri"
                 android:textColor="@color/black"
-                app:chipBackgroundColor="#D3D3D3"/>
+                app:chipBackgroundColor="#D3D3D3"
+               />
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip7"
                 android:layout_width="wrap_content"
@@ -221,20 +236,18 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/sat"
                 android:textColor="@color/black"
-                app:chipBackgroundColor="#D3D3D3"/>
+                app:chipBackgroundColor="#D3D3D3"
+               />
         </com.google.android.material.chip.ChipGroup>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/addscheduletext"
-            android:layout_marginTop="20dp"
             android:layout_width="200dp"
-            android:layout_height="51dp"
+            android:layout_height="55dp"
             android:text="Add Schedule"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="15sp"
             android:layout_gravity="center"
-            style="@style/Widget.MyLightButton"/>
+            android:layout_marginTop="16dp"
+            style="@style/Widget.MySkyyButton"/>
 
     </LinearLayout>
     <ScrollView

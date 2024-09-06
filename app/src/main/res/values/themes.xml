@@ -24,6 +24,13 @@
 
     </style>
 
+    <style name="Widget.MySkyyButton" parent="Widget.Material3.Button">
+        <!-- Set light blue background color -->
+        <item name="backgroundTint">@color/skyyblueDarker</item>
+        <!-- Remove corner radius -->
+
+    </style>
+
 
     <style name="Widget.MyLightButton" parent="Widget.Material3.Button">
         <!-- Set light blue background color -->
