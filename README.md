@@ -1,0 +1,1 @@
+The Medicare App is designed to assist elderly users and their caregivers in managing medicine schedules, monitoring health, and ensuring timely medication through an integrated IoT medicine dispenser and fall detection system. The app is built with Android (Kotlin) and leverages Firebase for authentication, data storage, and real-time notifications.
