@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="15sp"
-            android:text="@string/camsetup_help"
+            android:text=" Need help"
             />
 
         <ImageView

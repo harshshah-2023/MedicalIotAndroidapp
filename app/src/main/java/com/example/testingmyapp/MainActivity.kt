@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.nav_profile->{
-                    replacefrga(MyaccountFragment())
+                    replacefrga(AccountCentreFragment())
                     true
                 }
                 else->false

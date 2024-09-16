@@ -163,91 +163,120 @@
             android:textSize="18sp"
             android:layout_marginTop="5dp"
             android:textColor="@color/black"
-            app:singleSelection="true"/>
+           />
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipgroup"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            >
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip1"
+                android:id="@+id/chipSunday"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/sun"
                 android:textColor="@color/black"
-                app:chipBackgroundColor="#D3D3D3"
+                app:chipBackgroundColor="@color/chip_selector"
                 app:checkedIconVisible="false"
                 />
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip2"
+                android:id="@+id/chipMonday"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 app:checkedIconVisible="false"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/mon"
-                app:chipBackgroundColor="#D3D3D3"
+                app:chipBackgroundColor="@color/chip_selector"
 
                 android:textColor="@color/black"/>
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip3"
+                android:id="@+id/chipTuesday"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 app:checkedIconVisible="false"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/tue"
                 android:textColor="@color/black"
-                app:chipBackgroundColor="#D3D3D3"
+                app:chipBackgroundColor="@color/chip_selector"
                />
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip4"
                 android:layout_width="wrap_content"
-
                 android:layout_height="match_parent"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/wed"
                 android:textColor="@color/black"
-
-                app:chipBackgroundColor="#D3D3D3"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/chip_selector"
                />
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip5"
+                android:id="@+id/chipWednesday"
                 android:layout_width="wrap_content"
                 app:checkedIconVisible="false"
                 android:layout_height="match_parent"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/thurs"
                 android:textColor="@color/black"
-                app:chipBackgroundColor="#D3D3D3"
+                app:chipBackgroundColor="@color/chip_selector"
                />
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip6"
+                android:id="@+id/chipFriday"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/fri"
                 android:textColor="@color/black"
-                app:chipBackgroundColor="#D3D3D3"
+                app:chipBackgroundColor="@color/chip_selector"
+                app:checkedIconVisible="false"
                />
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip7"
+                android:id="@+id/chipSaturday"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="@string/sat"
                 android:textColor="@color/black"
-                app:chipBackgroundColor="#D3D3D3"
+                app:chipBackgroundColor="@color/chip_selector"
+                app:checkedIconVisible="false"
                />
+
+
         </com.google.android.material.chip.ChipGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+
+            >
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/addscheduletext"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="55dp"
             android:text="Add Schedule"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
+            android:layout_marginRight="10dp"
             style="@style/Widget.MySkyyButton"/>
+
+
+            <TextView
+                android:id="@+id/Allmedicine_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show all medicine"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:textColor="@color/blue" />
+
+
+
+        </LinearLayout>
 
     </LinearLayout>
     <ScrollView

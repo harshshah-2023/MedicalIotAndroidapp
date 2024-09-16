@@ -1,10 +1,12 @@
 package com.example.testingmyapp.model
 
 data class MedicineScheduleItem(
-    val medicineName: String = "",
-    val dosage: String = "",
-    val time: String = "",
-    val day: String = "",
-    val mealTime: String = ""
-)
-
+    var medicineName: String? = null,
+    var dosage: String? = null,
+    var time: String? = null,
+    var mealTime: String? = null,
+    var days: List<String>? = listOf()  // Ensure this is a List<String>
+) {
+    // No-argument constructor needed by Firebase
+    constructor() : this(null, null, null, null, null)
+}

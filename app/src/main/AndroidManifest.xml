@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Testingmyapp"
         tools:targetApi="31">
-
+        <activity
+            android:name=".HelpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilepageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AllMedicineActivity"
+            android:exported="false" />
         <activity
             android:name=".RegistrationActivity"
             android:exported="false" />
@@ -27,12 +35,13 @@
             android:theme="@style/Theme.MyApp.MySplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true" /> <!-- Ensure this is exported if you use fragments here -->
+            android:exported="true" />
     </application>
 
 </manifest>
