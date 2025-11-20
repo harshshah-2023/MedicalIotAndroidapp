@@ -90,7 +90,6 @@ Medicare/
 
 ## 📸 Screenshots
 
-> Replace the sample image links below with your actual uploaded image URLs or GitHub asset links.
 
 | Screen | Preview |
 |-------|---------|
@@ -107,7 +106,7 @@ Medicare/
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/medicare.git
+git clone https://github.com/harshshah-2023/MedicalIotAndroidapp.git
 cd medicare
 ````
 
@@ -171,6 +170,3 @@ app/src/
 | **Aditi Bhoir** | Lead Android Developer & System Architect |
 | **Harsh Shah**  | IoT & Backend Integration Engineer        |
 
-
-Just tell me what you want 😎🔥
-```
