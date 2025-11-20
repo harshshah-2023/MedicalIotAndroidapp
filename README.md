@@ -168,5 +168,5 @@ app/src/
 | Name            | Role                                      |
 | --------------- | ----------------------------------------- |
 | **Aditi Bhoir** | Android App Development, UI/UX Design,  Firebase Integration, IoT Hardware Development, Sensor Integration |
-| **Harsh Shah**  | Android App Development, IoT Hardware Development, Sensor Integration, Backend Sync |
+| **Harsh Shah**  | Android App Development, IoT Hardware Development, Sensor Integration, Backend Sync, Firebase Integration|
 
