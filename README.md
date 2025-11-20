@@ -107,7 +107,7 @@ Medicare/
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/harshshah-2023/MedicalIotAndroidapp.git
-cd medicare
+cd MedicalIotAndroidapp
 ````
 
 ### 2️⃣ Open in Android Studio
@@ -167,6 +167,6 @@ app/src/
 
 | Name            | Role                                      |
 | --------------- | ----------------------------------------- |
-| **Aditi Bhoir** | Lead Android Developer & System Architect |
-| **Harsh Shah**  | IoT & Backend Integration Engineer        |
+| **Aditi Bhoir** | Android App Development, UI/UX Design,  Firebase Integration |
+| **Harsh Shah**  | Android App Development, IoT Hardware Development, Sensor Integration, Backend Sync |
 
